@@ -1,0 +1,118 @@
+{
+    "last_id": "14",
+    "namespaces": {
+        "default": "http://knova.ru/user/1598093340996",
+        "ontolis-avis": "http://knova.ru/ontolis-avis",
+        "owl": "http://www.w3.org/2002/07/owl",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+        "xsd": "http://www.w3.org/2001/XMLSchema"
+    },
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "1",
+            "name": "Start",
+            "namespace": "http://knova.ru/user/1598093340996",
+            "position_x": 223,
+            "position_y": 200
+        },
+        {
+            "attributes": {
+            },
+            "id": "2",
+            "name": "Какого ты пола?",
+            "namespace": "http://knova.ru/user/1598093340996",
+            "position_x": 209,
+            "position_y": 386
+        },
+        {
+            "attributes": {
+            },
+            "id": "5",
+            "name": "Какой год твоего рождения?",
+            "namespace": "http://knova.ru/user/1598093340996",
+            "position_x": 200,
+            "position_y": 487
+        },
+        {
+            "attributes": {
+            },
+            "id": "7",
+            "name": "End",
+            "namespace": "http://knova.ru/user/1598093340996",
+            "position_x": 306,
+            "position_y": 659
+        },
+        {
+            "attributes": {
+            },
+            "id": "9",
+            "name": "Привет! Как мне к тебе обращаться?",
+            "namespace": "http://knova.ru/user/1598093340996",
+            "position_x": 213,
+            "position_y": 298
+        },
+        {
+            "attributes": {
+            },
+            "id": "12",
+            "name": "Спасибо за информацию!",
+            "namespace": "http://knova.ru/user/1598093340996",
+            "position_x": 248,
+            "position_y": 575
+        }
+    ],
+    "relations": [
+        {
+            "attributes": {
+                "dbFieldToFill": "Пол"
+            },
+            "destination_node_id": "5",
+            "id": "6",
+            "name": "next",
+            "namespace": "http://knova.ru/user/1598093340996",
+            "source_node_id": "2"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "9",
+            "id": "10",
+            "name": "next",
+            "namespace": "http://knova.ru/user/1598093340996",
+            "source_node_id": "1"
+        },
+        {
+            "attributes": {
+                "dbFieldToFill": "Имя"
+            },
+            "destination_node_id": "2",
+            "id": "11",
+            "name": "next",
+            "namespace": "http://knova.ru/user/1598093340996",
+            "source_node_id": "9"
+        },
+        {
+            "attributes": {
+                "dbFieldToFill": "ДатаРождения"
+            },
+            "destination_node_id": "12",
+            "id": "13",
+            "name": "next",
+            "namespace": "http://knova.ru/user/1598093340996",
+            "source_node_id": "5"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "7",
+            "id": "14",
+            "name": "next",
+            "namespace": "http://knova.ru/user/1598093340996",
+            "source_node_id": "12"
+        }
+    ],
+    "visualize_ont_path": ""
+}

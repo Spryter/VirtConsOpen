@@ -30,14 +30,14 @@ namespace VirtualConsultant
 		{
 			JToken clientCurrentNode;
 			Клиент client;
-			using (ApplicationContext db = new ApplicationContext())
+			using (virtualconsultantContext db = new virtualconsultantContext())
 			{
-				client = db.Клиент.Where(_client => _client.TelegramGuid == telegramClientId).FirstOrDefault();
+				client = db.Клиент.Where(_client => _client.КодПользователяТелеграм == telegramClientId).FirstOrDefault();
 				if (client == null)
 				{
 					client = new Клиент();
-					client.TelegramGuid = telegramClientId;
-					client.CurrentNodeId = startNode["id"].ToString();
+					client.КодПользователяТелеграм = telegramClientId;
+					client.КодПоследнегоСообщения = startNode["id"].ToString();
 					clientCurrentNode = startNode;
 
 					db.Клиент.Add(client);
@@ -45,7 +45,7 @@ namespace VirtualConsultant
 				}
 				else
 				{
-					clientCurrentNode = ontology.GetNodeById(client.CurrentNodeId);
+					clientCurrentNode = ontology.GetNodeById(client.КодПоследнегоСообщения);
 				}
 
 
@@ -88,7 +88,7 @@ namespace VirtualConsultant
 					clientCurrentNode = ontology.GetNodesByForwardRelationName(startNode, "next").FirstOrDefault();
 				}
 
-				client.CurrentNodeId = clientCurrentNode["id"].ToString();
+				client.КодПоследнегоСообщения = clientCurrentNode["id"].ToString();
 				db.SaveChanges();
 
 				var answer = clientCurrentNode["name"].ToString();

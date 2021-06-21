@@ -13,7 +13,7 @@ namespace VirtualConsultant
 		static AnswerGenerator answerGenerator;
 		public static void Main(string[] args)
 		{
-			botClient = new TelegramBotClient("1112038574:AAGARslnl8CdLSZajEBHTlLlfh4qI-O8GWY") { Timeout = TimeSpan.FromSeconds(10) };
+			botClient = new TelegramBotClient("secret") { Timeout = TimeSpan.FromSeconds(10) };
 
 			var me = botClient.GetMeAsync().Result;
 			Console.WriteLine(
